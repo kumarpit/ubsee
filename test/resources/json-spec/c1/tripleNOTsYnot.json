@@ -1,0 +1,43 @@
+{
+	"title": "Should parse double NOTs",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"NOT": {
+					"NOT": {
+						"AND": [
+							{
+								"GT": {
+									"sections_avg": 97
+								}
+							},
+							{
+								"OR": [
+									{
+										"IS": {
+											"sections_dept": "*a*"
+										}
+									},
+									{
+										"IS": {
+											"sections_dept": "*c*"
+										}
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "ResultTooLargeError"
+}

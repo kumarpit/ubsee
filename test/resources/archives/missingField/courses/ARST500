@@ -1,0 +1,39 @@
+{
+	"result": [
+		{
+			"tier_eighty_five": 0,
+			"tier_ninety": 11,
+			"Section": "002",
+			"id": 14803,
+			"Professor": ["first", "last"],
+			"Audit": 0,
+			"Year": "2012",
+			"High": 98,
+			"Course": "500",
+			"Session": "w",
+			"Pass": 11,
+			"Fail": 0,
+			"Avg": 94,
+			"Subject": "#$%"
+			
+"			"rank" : []
+		},
+		
+		{
+			"Title": "info tech&archvs",
+			"Section": "overall",
+			"id": 14804,
+			"Professor": "",
+			"Year": "2012",
+			"Stddev": 2.49,
+			"High": 98,
+			"Course": "500",
+			"Session": "w",
+			"Pass": 11,
+			"Fail": 0,
+			"Avg": 94,
+			"Subject": "arst"
+		}
+	],
+	"rank": 0
+}

@@ -1,0 +1,30 @@
+{
+	"title": "Should reject on only whitespace",
+	"input": {
+		"WHERE": {
+			
+				"OR": [
+					{
+						"IS": {
+							"_dept": "cpsc"
+						}
+					},
+					{
+						"LT": {
+							"_avg": 90
+						}
+					}
+				]
+			
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"_dept",
+				"_avg"
+			],
+			"ORDER": "_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

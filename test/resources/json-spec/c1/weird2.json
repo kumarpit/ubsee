@@ -1,0 +1,110 @@
+{
+	"title": "Should run weird queries",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"NOT": {
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 97
+							}
+						},
+						{
+							"AND": [
+								{
+									"OR": [
+										{
+											"IS": {
+												"sections_dept": "*a*"
+											}
+										},
+										{
+											"IS": {
+												"sections_dept": "*c*"
+											}
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": false,
+	"expected": [
+		{
+			"sections_dept": "math",
+			"sections_avg": 97.09
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 97.09
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 97.25
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 97.25
+		},
+		{
+			"sections_dept": "cnps",
+			"sections_avg": 97.47
+		},
+		{
+			"sections_dept": "cnps",
+			"sections_avg": 97.47
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 97.48
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 97.48
+		},
+		{
+			"sections_dept": "educ",
+			"sections_avg": 97.5
+		},
+		{
+			"sections_dept": "crwr",
+			"sections_avg": 98
+		},
+		{
+			"sections_dept": "crwr",
+			"sections_avg": 98
+		},
+		{
+			"sections_dept": "eece",
+			"sections_avg": 98.75
+		},
+		{
+			"sections_dept": "eece",
+			"sections_avg": 98.75
+		},
+		{
+			"sections_dept": "cnps",
+			"sections_avg": 99.19
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 99.78
+		},
+		{
+			"sections_dept": "math",
+			"sections_avg": 99.78
+		}
+	]
+}

@@ -1,0 +1,6 @@
+{
+    "title": "Should reject with invalid ORDER key",
+    "input": {"WHERE":{"GT":{"sections_avg":97}},"OPTIONS":{"COLUMNS":["sections_dept","sections_avg"],"ORDER":"sections_total"}},
+    "errorExpected": true,
+    "expected": "InsightError"
+}

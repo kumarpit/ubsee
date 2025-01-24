@@ -1,0 +1,32 @@
+{
+    "title": "should reject query if dataset not added yet",
+    "input": {
+
+        "WHERE":{
+    
+           "GT":{
+    
+              "dne_avg":97
+    
+           }
+    
+        },
+    
+        "OPTIONS":{
+    
+           "COLUMNS":[
+    
+              "dne_dept",
+    
+              "dne_avg"
+    
+           ],
+    
+           "ORDER":"dne_avg"
+    
+        }
+    
+    },
+    "errorExpected": true,
+    "expected": "InsightError"
+}

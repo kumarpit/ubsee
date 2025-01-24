@@ -1,0 +1,22 @@
+{
+	"title": "Should reject if excess keys in WHERE",
+	"input": {
+		"WHERE": {
+			"IS": {
+				"sections_dept": "cpsc"
+			},
+			"GT": {
+				"sections_avg": 90
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_pass"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

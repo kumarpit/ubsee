@@ -1,0 +1,55 @@
+{
+	"title": "Should run weird queries",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"NOT": {
+					"AND": [
+						{
+							"GT": {
+								"sections_avg": 97
+							}
+						},
+						{
+							"AND": [
+								{
+									"OR": [
+										{
+											"IS": {
+												"sections_dept": "*a*"
+											}
+										},
+										{
+											"IS": {
+												"sections_dept": "*c*"
+											}
+										},
+										{
+											"LT": {
+												"sections_pass": 50
+											}
+										}
+									]
+								},
+								{
+									"GT": {
+										"sections_dept": 2000
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_dept",
+				"sections_avg"
+			],
+			"ORDER": "sections_dept"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

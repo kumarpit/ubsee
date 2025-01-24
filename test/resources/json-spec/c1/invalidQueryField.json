@@ -1,0 +1,30 @@
+{
+	"title": "Should reject on invalid query field",
+	"input": {
+		"WHERE": {
+			"NOT": {
+				"OR": [
+					{
+						"IS": {
+							"sections_total": "cpsc"
+						}
+					},
+					{
+						"LT": {
+							"sections_avg": 90
+						}
+					}
+				]
+			}
+		},
+		"OPTIONS": {
+			"COLUMNS": [
+				"sections_total",
+				"sections_avg"
+			],
+			"ORDER": "sections_avg"
+		}
+	},
+	"errorExpected": true,
+	"expected": "InsightError"
+}

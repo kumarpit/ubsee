@@ -1,0 +1,6 @@
+{
+    "title": "should reject on missing OPTIONS",
+    "input": {"WHERE":{}},
+    "errorExpected": true,
+    "expected": "InsightError"
+}
